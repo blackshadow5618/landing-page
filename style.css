@@ -235,18 +235,7 @@ body{
 
 
 /* Media Screen */
-@media (min-width: 525px) and (max-width: 768px) {
-    :root{
-        --xl: 36px;
-        --lg: 24px;
-        --md: 18px;
-        --sm: 14px
-    }
-
-    .container{
-        width: 80%;
-    }
-
+@media (max-width: 768px) {
     .navbar-btn.navbar-btn.toggle .line:nth-child(2){
         display: none;
     }
@@ -276,7 +265,7 @@ body{
         position: fixed;
         top: -100%;
         left: 0;
-        
+
         transition: all 1s ease-in;
     }
     
@@ -296,6 +285,19 @@ body{
 
     .navbar-links .link .text{
         font-size: var(--md);
+    }
+}
+
+@media (min-width: 525px) and (max-width: 768px) {
+    :root{
+        --xl: 36px;
+        --lg: 24px;
+        --md: 18px;
+        --sm: 14px
+    }
+
+    .container{
+        width: 80%;
     }
 
     .flex-center{
