@@ -7,186 +7,374 @@
 }
 
 :root{
-    --color: #3882F6;
-    --hero-bg: #1F2937;
-    --quote-bg: #E5E7EB;
+    --bg-color: #1f2937;
+    --title-color: #f9faf8;
+    --primary-color: #3882f6;
+    --secondary-color: #e5e7eb;
+    --xl: 48px;
+    --lg: 36px;
+    --md: 24px;
+    --sm: 18px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btn{
+    font-size: var(--sm);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    color: var(--title-color);
+    padding: 10px 40px;
+}
+
+.hero{
+    background: var(--bg-color);
 }
 
 body{
     font-family: sans-serif;
 }
 
-.hero{
-    background-color: var(--hero-bg);
+.container{
+    width: 80%;
+    margin: auto;
 }
 
-.container{
-    width: 70%;
-    margin: auto;
-
+.flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.flex-row{
+    flex-direction: row;
+}
+
+
+/* Start Hero Section  */
+
+/* start navbar  */
 .navbar{
     width: 100%;
-    padding: 20px 0;
-
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-links{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.hero .main-text{
-    font-size: 48px;
-    font-weight: bold;
-    color: #F9FAF8;
-}
-
-.hero .secondary-text,
-.navbar .link .text{
-    font-size: 18px;
-    color: var(--quote-bg);
-}
-
-.hero .link .text{
-    margin: 10px;
-}
-
-.hero .secondary-text{
-    margin: 1rem 0;
-}
-
-.hero .secondary-text{
-    letter-spacing: 1px;
+    padding: var(--sm) 0;
 }
 
 .navbar .logo .text{
-    font-size: 24px;
-    color: #F9FAF8;
+    font-size: var(--md);
+    color: var(--title-color);
+}
+
+.navbar-btn{
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    padding: 5px;
+
+    position: fixed;
+    top: 10px;
+    right: calc(15% - 30px);
+
+    display: none;
+
+    z-index: 2;
+}
+
+.navbar-btn .line{
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+
+    margin: 5px 0;
+}
+
+.link .text,
+.secondary-text{
+    font-size: var(--sm);
+    color: var(--secondary-color);
+}
+
+.navbar .link .text{
+    margin: 10px;
+}
+/* end navbar  */
+
+/* start banner  */
+.banner .secondary-text{
+    margin: 10px 0;
 }
 
 .banner{
-    margin: 48px 0;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: end;
-    grid-gap: 48px;
+    grid-gap: 3rem;
+
+    overflow: hidden;
 }
 
-.btn{
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: var(--color);
-    border: none;
-    border-radius: 10px;
-    color: #F9FAF8;
-    padding: 10px 30px;
+.hero .main-text{
+    font-size: var(--xl);
+    color: var(--title-color);
 }
 
-.col2{
-    height: 300px;
+.banner .col2{
+    height: calc(100% / 2);
 }
+/* end banner  */
 
-.col2 img{
-    width: 100%;    
-    height: 100%;
-    object-fit: cover;
+/* End Hero Section  */
 
-}
-
+/* Start Information Section  */
 .information{
+    background-color: var(--title-color);
     margin-bottom: 5rem;
 }
 
 .information h1{
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--hero-bg);
+    font-size: var(--lg);
     margin: 3rem 0;
 }
 
-.information .squares{
-    width: 100%;
-    
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
+.squares{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2.5rem;
 }
 
 .square{
-    width: 100%;
     text-align: center;
-    padding: 0 10px;
 }
 
-.img-container{
-    width: 100%;
-    /* height: 200px; */
+.square, .square img{
     border-radius: 10px;
-}
-
-.img-container img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;    
 }
 
 .square .secondary-text{
     font-weight: bold;
-    color: #777;
     margin: 10px 0;
 }
 
+.square:hover .secondary-text{
+    color: var(--bg-color);
+}
+/* End Information Section  */
+
+
+/* Start Quote Section  */
 .quote-section{
-    width: 100%;
-    background: var(--quote-bg);
-    padding: 6rem 0;
+    background-color: var(--secondary-color);
+    padding: 5rem 0;
 }
 
-.blockquote{
-    width: 70%;
-    font-style: italic;
-    font-weight: lighter;
-    font-size: 36px;
-    color: #1F2937;
-
+.quote-section .blockquote{
+    width: 55%;
+    text-align: justify;
     align-items: end;
-    gap: 1rem;
 }
 
+.blockquote p{
+    font-size: var(--lg);
+    font-weight: lighter;
+    font-style: italic;
+    color: var(--bg-color);
+    padding: 1.5rem 0;
+}
 
-.btn-section .container{
-    background: var(--color);
+.blockquote h4{
+    font-weight: bolder;
+    font-size: var(--md);
+}
+/* End Quote Section  */
+
+
+/* Start Action Section  */
+.action-section .action-container{
+    background-color: var(--primary-color);
     border-radius: 10px;
-
-    flex-direction: row;
-    justify-content: space-around;
-
+    padding: 3rem 0; 
     margin: 5rem auto;
+    justify-content: space-around;
 }
 
-.btn-section .text{
-    color: var(--quote-bg);
-    margin: 3rem;
+.action-container .text{
+    color: var(--secondary-color);
 }
 
-.btn-section .btn{
-    border: 3px solid var(--quote-bg);
+.action-container .text h2{
+    font-size: var(--md);
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
 }
 
-footer{
-    background-color: var(--hero-bg);
-    color: var(--quote-bg);
-    padding: 36px;
+.action-container .btn{
+    font-weight: bold;
+    border: 3px solid var(--title-color);
+}
+/* End Action Section  */
+
+
+/* Start Footer Section  */
+.footer-container{
+    font-size: var(--sm);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    padding: var(--lg) 0;
+}
+
+/* End Footer Section  */
+
+
+
+/* Media Screen */
+@media (min-width: 525px) and (max-width: 768px) {
+    :root{
+        --xl: 36px;
+        --lg: 24px;
+        --md: 18px;
+        --sm: 14px
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    .navbar-btn.navbar-btn.toggle .line:nth-child(2){
+        display: none;
+    }
+    .navbar-btn.navbar-btn.toggle .line:nth-child(1){
+        transform: translateY(4px) rotate(45deg);
+        transition: all 0.3s linear;
+    }
+    .navbar-btn.navbar-btn.toggle .line:nth-child(3){
+        transform: translateY(-4px) rotate(-45deg);
+        transition: all 0.3s linear;
+    }
+
+    .navbar-btn{
+        display: block;
+    }
+
+    .navbar-btn.toggle{
+        background-color: red;
+    }
+
+    .navbar-links{
+        display: none;
+
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+        position: fixed;
+        top: -100%;
+        left: 0;
+        
+        transition: all 1s ease-in;
+    }
+    
+    .navbar-btn.toggle + .navbar-links{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+        transform: translateY(100%);
+        transition: all 1s ease-in;
+    }
+
+    .navbar-links .link{
+        margin-left: 2rem;
+    }
+
+    .navbar-links .link .text{
+        font-size: var(--md);
+    }
+
+    .flex-center{
+        flex-wrap: wrap;
+    }
+
+    .squares{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .action-section .action-container{
+        padding: 2rem;
+        justify-content: flex-start;
+    }
+
+    .action-container .text{
+        margin: 1rem 0;
+    }
+
+    .action-container .btn{
+        margin: 1rem 0;
+    }
+
+}
+
+
+@media (max-width: 525px) {
+    :root{
+        --xl: 30px;
+        --lg: 20px;
+        --md: 16px;
+        --sm: 14px
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    .flex-center{
+        flex-wrap: wrap;
+    }
+
+    .hero .banner{
+        margin-bottom: 3rem;
+    }
+
+    .banner{
+        display: flex;
+        flex-direction: column-reverse;
+
+        margin-top: 3rem;
+    }
+
+    .banner .col2{
+        width: 100%;
+        height: 300px;
+    }
+
+    .navbar .navbar-links{
+        display: none;
+    }
+
+    .squares{
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+
+    .action-section .action-container{
+        padding: 2rem;
+        justify-content: flex-start;
+    }
+
+    .action-container .text{
+        margin: 1rem 0;
+    }
+
+    .action-container .btn{
+        margin: 1rem 0;
+    }
+
 }

@@ -9,19 +9,26 @@
 <body>
 
     <header class="hero">
-        <div class="container">
-            <nav class="navbar">
+        <div class="container flex-center">
+            <nav class="navbar flex-center flex-row">
                 <a href="index.html" class="logo">
                     <h3 class="text">Header Logo</h3>
                 </a>
-                <ul class="navbar-links">
+
+                <button class="navbar-btn">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+
+                <ul class="navbar-links flex-center flex-row">
                     <li class="link"><a href="#" class="text">header link one</a></li>
                     <li class="link"><a href="#" class="text">header link two</a></li>
                     <li class="link"><a href="#" class="text">header link three</a></li>
                 </ul>
             </nav>
 
-            <div class="banner">
+            <div class="banner flex-center flex-row">
                 <div class="col1">
                     <p class="main-text">This website is awesome</p>
                     <p class="secondary-text">This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
@@ -34,7 +41,7 @@
         </div>       
     </header>
 
-    <section class="information container">
+    <section class="information container flex-center">
         <h1>Some random information.</h1>
         <div class="squares">
             <div class="square">
@@ -65,14 +72,14 @@
     </section>
 
     <section class="quote-section">
-        <blockquote class="blockquote container">
+        <blockquote class="blockquote container flex-center">
             <p>This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</p>
             <h4>-Thor, God of Tunder</h4>
         </blockquote>
     </section>
 
-    <section class="btn-section">
-        <div class="container">
+    <section class="action-section">
+        <div class="container action-container flex-center flex-row">
             <div class="text">
                 <h2>Call to action! It's time!</h2>
                 <p>Sign up for our product by clicking that button right over there!</p>
@@ -82,9 +89,12 @@
     </section>
 
     <footer>
-        <div class="container">
+        <div class="footer-container flex-center">
             <p>Copyright &copy; The Odin Project 2021</p>
         </div>
     </footer>
+
+
+    <script src="./app.js"></script>
 </body>
 </html>
